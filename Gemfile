@@ -58,3 +58,5 @@ gem "google-api-client", "~> 0.30.10"
 gem "activeadmin", "~> 2.3"
 
 gem "devise", "~> 4.7"
+
+gem "config", "~> 2.0"
