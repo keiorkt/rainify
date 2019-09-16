@@ -3,7 +3,13 @@ class Event < ApplicationRecord
 
   belongs_to :calendar
 
-  def import(max_results_num = 30, calendar_id = "primary")
+  def import
+    Calendar.where(notify: true).each do |calendar|
+      import_from(calendar.owner_identifier, 30)
+    end
+  end
+
+  def import_from(calendar_id = "primary", max_results_num = 30)
     service = activate_service
     response = service.list_events(calendar_id,
                                   max_results: max_results_num,

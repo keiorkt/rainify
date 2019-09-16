@@ -1,5 +1,4 @@
 class WeatherItem < ApplicationRecord
-  include ApiCallable
 
   belongs_to :city
 
