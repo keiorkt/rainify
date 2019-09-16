@@ -60,3 +60,5 @@ gem "activeadmin", "~> 2.3"
 gem "devise", "~> 4.7"
 
 gem "config", "~> 2.0"
+
+gem "line-bot-api", "~> 1.12"
