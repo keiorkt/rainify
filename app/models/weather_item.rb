@@ -1,14 +1,3 @@
-# create_table "weather_items", force: :cascade do |t|
-#   t.integer "city_id", null: false
-#   t.string "type", null: false
-#   t.datetime "start_at", null: false
-#   t.datetime "end_at", null: false
-#   t.datetime "created_at", precision: 6, null: false
-#   t.datetime "updated_at", precision: 6, null: false
-#   t.index ["city_id"], name: "index_weather_items_on_city_id"
-#   t.index ["start_at"], name: "index_weather_items_on_start_at"
-# end
-
 class WeatherItem < ApplicationRecord
   include ApiCallable
 
