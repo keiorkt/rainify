@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_09_15_142242) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
+    t.integer "open_weather_identifier"
     t.boolean "is_current_location", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -67,11 +68,13 @@ ActiveRecord::Schema.define(version: 2019_09_15_142242) do
 
   create_table "weather_items", force: :cascade do |t|
     t.integer "city_id", null: false
-    t.datetime "forecast_for", null: false
-    t.integer "precipitation_percentage", default: 0, null: false
+    t.string "weather_type", null: false
+    t.datetime "start_at", null: false
+    t.datetime "end_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["city_id"], name: "index_weather_items_on_city_id"
+    t.index ["start_at"], name: "index_weather_items_on_start_at"
   end
 
   add_foreign_key "events", "calendars"

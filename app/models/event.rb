@@ -22,4 +22,8 @@ class Event < ApplicationRecord
       event.save!
     end
   end
+
+  def delete_needless_data
+    Event.where('end_at < ?', Time.now).destroy_all
+  end
 end
