@@ -75,3 +75,5 @@ gem "config", "~> 2.0"
 gem "line-bot-api", "~> 1.12"
 
 gem "whenever", "~> 1.0"
+
+gem "therubyracer", "~> 0.12.3"
