@@ -5,7 +5,7 @@ set :application, "rainify"
 set :repo_url, "git@github.com:keiorkt/rainify.git"
 set :branch, 'master'
 set :deply_to, '/var/www/rainify'
-set :linked_files, fetch(:linked_files, []).push('config/secrets.yml', 'config/database.yml', 'config/credentials.json', 'config/credentials.yml.enc', 'config/master.key', 'token.yaml', 'config/settings/development.yml', 'config/settings/production.yml')
+set :linked_files, fetch(:linked_files, []).push('config/secrets.yml', 'config/database.yml', 'config/credentials.json', 'config/master.key', 'token.yaml', 'config/settings/development.yml', 'config/settings/production.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 set :keep_releases, 5
 set :rbenv_ruby, '2.5.3'
