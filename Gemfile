@@ -50,6 +50,17 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
+group :deveopment, :test do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -63,4 +74,4 @@ gem "config", "~> 2.0"
 
 gem "line-bot-api", "~> 1.12"
 
-gem "pg", "~> 1.1"
+gem "whenever", "~> 1.0"

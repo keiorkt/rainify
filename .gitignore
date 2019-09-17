@@ -41,6 +41,7 @@ credentials.yml.enc
 config/settings/*
 config/settings.local.yml
 config/settings.yml
+config/secrets.yml
 
 /vendor/bundle/
 /.bundle
