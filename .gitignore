@@ -37,7 +37,6 @@ yarn-debug.log*
 # GCP
 credentials.json
 token.yaml
-credentials.yml.enc
 config/settings/*
 config/settings.local.yml
 config/settings.yml
