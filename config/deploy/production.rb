@@ -32,7 +32,16 @@ set :ssh_options, keys: '~/.ssh/rainify-aws.pem'
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
+namespace :deploy do
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+end
+after 'deploy:publishing', 'deploy:restart'
 
+set :unicorn_pid, "/var/tmp/unicorn.pid"
+set :unicorn_config_path, "/var/www/rainify/current/config/unicorn.rb"
+set :unicorn_rack_env, "production"
 
 # Custom SSH Options
 # ==================
