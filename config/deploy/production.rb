@@ -39,7 +39,7 @@ namespace :deploy do
 end
 after 'deploy:publishing', 'deploy:restart'
 
-set :unicorn_pid, "/var/tmp/unicorn.pid"
+set :unicorn_pid, "/var/www/rainify/current/tmp/pids/unicorn.pid"
 set :unicorn_config_path, "/var/www/rainify/current/config/unicorn.rb"
 set :unicorn_rack_env, "production"
 
