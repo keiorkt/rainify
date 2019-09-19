@@ -403,7 +403,7 @@ DEPENDENCIES
   google-api-client (~> 0.30.10)
   jbuilder (~> 2.7)
   line-bot-api (~> 1.12)
-  listen (>= 3.0.5, < 3.2)
+  listen (~> 3.1.5)
   mysql2
   puma (~> 3.11)
   rails (~> 6.0.0)
