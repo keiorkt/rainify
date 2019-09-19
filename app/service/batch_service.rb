@@ -4,7 +4,4 @@ class BatchService
     Event.new.import_all
     WeatherItem.new.import
   end
-
-  def calc_should_notify
-  end
 end
