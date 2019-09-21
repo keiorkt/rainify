@@ -3,6 +3,8 @@ class Event < ApplicationRecord
 
   belongs_to :calendar
 
+  scope :tomorrow_events, -> { where('start_at between ? and ?', Time.new.tomorrow.change(hour: 00, min: 00, sec: 00), (Time.new+2.days).change(hour: 00, min: 00, sec: 00)) }
+
   def import
     Calendar.where(notify: true).each do |calendar|
       import_from(calendar.owner_identifier, 30)
